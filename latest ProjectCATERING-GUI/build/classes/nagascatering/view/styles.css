@@ -1,0 +1,139 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 16, 2025, 1:28:10 PM
+    Author     : trend
+*/
+
+/* General Styles */
+.root {
+    -fx-font-family: "Arial", sans-serif; /* Or your preferred font */
+    -fx-background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Button Styles */
+.button {
+    -fx-background-color: #007bff; /* Primary blue */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 5px; /* Slightly rounded corners */
+    -fx-cursor: hand; /* Indicate clickable */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2); /* Subtle shadow */
+
+    /* Transition for hover effect */
+    /* -fx-transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out; */ /* Transitions can be tricky with JavaFX CSS */
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover */
+    /* -fx-transform: scale(1.03); */ /* Scale transform might need Java code */
+    -fx-cursor: hand; /* Ensure cursor stays hand */
+}
+
+.button:pressed {
+    -fx-background-color: #004085; /* Even darker blue when pressed */
+    /* -fx-transform: scale(0.98); */ /* Scale transform might need Java code */
+}
+
+/* Make disabled buttons look distinct */
+.button:disabled {
+    -fx-background-color: #cccccc; /* Gray background */
+    -fx-text-fill: #666666; /* Dark gray text */
+    -fx-opacity: 0.7; /* Make it slightly transparent */
+    -fx-effect: none; /* Remove shadow when disabled */
+    -fx-cursor: default; /* Default cursor */
+}
+
+
+/* Destructive action button (e.g., Delete) */
+.button-danger {
+    -fx-background-color: #dc3545; /* Red color */
+    -fx-text-fill: white;
+}
+
+.button-danger:hover {
+    -fx-background-color: #c82333; /* Darker red */
+}
+
+.button-danger:pressed {
+    -fx-background-color: #bd2130;
+}
+
+.button-danger:disabled {
+    -fx-background-color: #f8d7da; /* Light red background */
+    -fx-text-fill: #721c24; /* Dark red text */
+    -fx-opacity: 0.7;
+    -fx-effect: none;
+    -fx-cursor: default;
+}
+
+
+/* Labels */
+.label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #333;
+    -fx-padding: 3px; /* Add some padding */
+}
+
+.label-header {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0056b3; /* Dark blue */
+}
+
+/* Text Fields & Text Areas */
+.text-field, .text-area, .combo-box, .date-picker, .spinner {
+    -fx-font-size: 13px;
+    -fx-prompt-text-fill: #888;
+    -fx-background-radius: 3px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused, .date-picker:focused, .spinner:focused {
+    -fx-border-color: #007bff; /* Highlight border on focus */
+    -fx-border-width: 1.5px;
+}
+
+.text-field:disabled, .text-area:disabled, .combo-box:disabled, .date-picker:disabled, .spinner:disabled {
+    -fx-background-color: #e9ecef; /* Light gray background for disabled fields */
+    -fx-opacity: 0.7;
+}
+
+/* Table View */
+.table-view {
+    -fx-border-color: #ccc;
+    -fx-border-radius: 3px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #e9ecef; /* Light header background */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+    -fx-padding: 8px;
+}
+
+.table-view .table-cell {
+    -fx-padding: 8px;
+    -fx-border-color: transparent #ccc transparent transparent; /* Vertical grid lines */
+}
+
+/* Style for validation errors */
+.text-field-error, .date-picker-error {
+    -fx-border-color: red;
+    -fx-border-width: 1.5px;
+}
+
+/* Progress Indicator */
+.progress-indicator {
+    -fx-progress-color: #007bff; /* Match button color */
+}
